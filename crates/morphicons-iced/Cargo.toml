@@ -1,0 +1,18 @@
+[package]
+name = "morphicons-iced"
+description = "iced widget for morphicons: stroke icons that morph into each other with spring physics."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version = "1.88"
+
+[dependencies]
+morphicons.workspace = true
+iced_widget = { workspace = true, features = ["canvas"] }
+
+[dev-dependencies]
+morphicons-gallery = { path = "../morphicons-gallery" }
+iced = { workspace = true, features = ["canvas", "image-without-codecs"] }

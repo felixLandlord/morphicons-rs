@@ -1,0 +1,18 @@
+[package]
+name = "morphicons-egui"
+description = "egui widget for morphicons: stroke icons that morph into each other with spring physics."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+keywords.workspace = true
+categories.workspace = true
+rust-version = "1.95"
+
+[dependencies]
+morphicons.workspace = true
+egui.workspace = true
+
+[dev-dependencies]
+morphicons-gallery = { path = "../morphicons-gallery" }
+eframe.workspace = true

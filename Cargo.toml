@@ -1,0 +1,23 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+authors = ["morphicons-rs contributors"]
+keywords = ["icons", "animation", "morph", "svg", "spring"]
+categories = ["graphics", "gui", "rendering"]
+
+[workspace.dependencies]
+morphicons = { path = "crates/morphicons", version = "0.1.0" }
+egui = { version = "0.36", default-features = false }
+eframe = "0.36"
+iced = "0.14"
+iced_widget = "0.14"
+
+# Dependencies are built without debug info: GUI stacks are large and this keeps
+# `target/` several GB smaller while leaving our own crates fully debuggable.
+[profile.dev.package."*"]
+debug = false
